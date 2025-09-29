@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="lo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAJA Menu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style13.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">JAJA FOOD</div>
+      <button class="cart-button">🛒 ສັ່ງ</button>
+    </header>
+
+    <section class="menu">
+      <div class="menu-grid" id="menuContainer"></div>
+    </section>
+
+    <footer>
+      <p>© 2025 JAJA Food</p>
+    </footer>
+
+    <script>
+      const items = [
+        {
+          img: "images/friedrice.jpg",
+          name: "ເຂົ້າຜັດ",
+          price: "40.000 kip",
+        },
+        {
+          img: "images/noodle.jpg",
+          name: "ເຂົ້າປ່ຽກໄກ່",
+          price: "45.000 kip",
+        },
+        {
+          img: "images/seafood.jpg",
+          name: "ກະເຜົ່າທະເລ",
+          price: "45.000 kip",
+        },
+        {
+          img: "images/pork.jpg",
+          name: "ກະເຜົ່າໝູ",
+          price: "45.000 kip",
+        },
+        {
+          img: "images/omelet.jpg",
+          name: "ເຂົ້າໄຂ່ຈ້ຽວ",
+          price: "40.000 kip",
+        },
+        {
+          img: "images/crispy.jpg",
+          name: "ເຂົ້າຫມູກ່ອບ",
+          price: "45.000 kip",
+        },
+        {
+          img: "images/chickenrice.jpg",
+          name: "ເຂົ້າມັນໄກ່",
+          price: "45.000 kip",
+        },
+        {
+          img: "images/friedchicken.jpg",
+          name: "ເຂົ້າໄກ່ທອດ",
+          price: "45.000 kip",
+        },
+        {
+          img: "images/curry.jpg",
+          name: "ແກ້ງກະລີ່",
+          price: "45.000 kip",
+        },
+      ];
+
+      document.getElementById("menuContainer").innerHTML = items
+        .map(
+          (item) => `
+      <div class="card">
+        <img src="${item.img}" alt="${item.name}">
+        <div class="card-content">
+          <h4>${item.name}</h4>
+          <p>${item.price}</p>
+          <button>ສັ່ງເລີຍ!</button>
+        </div>
+      </div>
+    `
+        )
+        .join("");
+    </script>
+  </body>
+</html>
